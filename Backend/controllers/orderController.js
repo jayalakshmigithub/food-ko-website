@@ -3,23 +3,7 @@ import * as orderService from '../services/orderServices.js'
 
 
 
-// const createOrder = async (req, res) => {
-//     try {
-//         console.log('hii in order docjkj')
-//         const orderData = req.body;
 
-//         const newOrder = await orderService.createOrder(orderData);
-
-//         console.log('new order', newOrder);
-//         res.status(201).json({
-//             message: 'Order created successfully!',
-//             order: newOrder
-//         });
-//     } catch (error) {
-//         console.error(error);
-//         res.status(500).json({ message: 'Failed to create order', error: error.message });
-//     }
-// };
 const createOrder = async (req, res) => {
     try {
         const orderData = req.body;
@@ -27,7 +11,7 @@ const createOrder = async (req, res) => {
 
         res.status(201).json({
             message: 'Order created successfully!',
-            order: newOrder // make sure 'order' is included here
+            order: newOrder 
         });
     } catch (error) {
         console.error(error);
@@ -38,15 +22,6 @@ const createOrder = async (req, res) => {
 
 
 
-// const getAllOrders = async (req, res) => {
-//     try {
-//         const orders = await orderService.getAllOrders();
-//         res.status(200).json(orders);
-//     } catch (error) {
-//         console.error(error);
-//         res.status(500).json({ message: 'Failed to fetch orders', error: error.message });
-//     }
-// };
 
 const getAllOrders = async (req, res) => {
     try {
