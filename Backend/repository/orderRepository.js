@@ -38,7 +38,7 @@ const updateOrder = async (orderId, updatedData) => {
 
 
 const deleteOrder = async (orderId) => {
-    return await orderModel.findByIdAndDelete(orderId);
+    return await orderModel.findOneAndDelete(orderId);
 };
 
 export  {
