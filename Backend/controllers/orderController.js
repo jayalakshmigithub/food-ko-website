@@ -58,7 +58,7 @@ const getOrderById = async (req, res) => {
         console.error(error);
         res.status(500).json({ message: 'Failed to fetch order', error: error.message });
     }
-};
+};console.log('hii')
 
 
 const updateOrder = async (req, res) => {
